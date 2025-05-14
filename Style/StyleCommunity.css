@@ -1,0 +1,271 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;               /* Базовый шрифт */
+    background: rgba(0, 0, 0, .9);                /* Почти черный фон */
+    color: #fff;                                  /* Белый цвет текста */
+}
+/* Шапка сайта */
+header {
+    display: flex;                                /* Горизонтальное размещение */
+    justify-content: space-between;               /* Распределение по краям */
+    align-items: center;                          /* Выравнивание по вертикали */
+    background-color: #000;                       /* Черный фон */
+    padding: 15px 20px;
+    position: fixed;                              /* Фиксация сверху */
+    top: 0;
+    left: 0;
+    width: 99%;                                   /* Почти полная ширина */
+    z-index: 1000;                                /* Поверх остальных элементов */
+}
+/* Логотип */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+.logo:hover {
+    color: #ff4500;                               /* Оранжевый при наведении */
+    transition: color .3s ease;
+}
+/* Меню навигации */
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+nav a:hover {
+    color: #ff4500;
+    transition: color .3s ease;
+}
+/* Секция "Сообщество" */
+.community-section {
+    text-align: center;
+    padding: 70px 50px 50px;                      /* Верхний отступ с учетом фиксированного header */
+}
+.community-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+/* Карточки сообщества */
+.community-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, .1);          /* Полупрозрачный фон */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2); /* Светлая тень */
+    transition: transform .3s;
+}
+.community-card:hover {
+    transform: scale(1.05);                       /* Увеличение при наведении */
+}
+/* Аватар в карточке */
+.community-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;                           /* Круглая форма */
+    object-fit: cover;                            /* Обрезка по рамке */
+    margin-right: 20px;
+}
+/* Информация в карточке */
+.community-card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.community-card h3 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+.community-card .details {
+    color: #ccc;
+    font-size: 14px;
+}
+.community-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ddd;
+}
+.community-card a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: 700;
+}
+.community-card a:hover {
+    color: #e03e00;
+    transition: color .3s ease;
+}
+/* Кнопка */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #ff4500;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background .3s;
+    display: inline-block;
+}
+.btn:hover {
+    background: #ffa500;
+}
+/* Футер */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-column {
+    min-width: 200px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+.footer-column ul li a:hover {
+    color: #ff4500;
+}
+/* Бургер-меню (мобильная навигация) */
+.burger {
+    display: none;                                /* По умолчанию скрыто */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.burger div {
+    width: 45px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s;
+}
+/* Адаптив: мобильные устройства */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 50px;
+        left: -100%;                              /* Скрыто за левым краем */
+        flex-direction: column;
+        background-color: #000;
+        width: 175px;
+        height: 100%;
+        gap: 25px;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+    }
+    nav.active {
+        left: 0;                                  /* Показать при активации */
+    }
+    .burger {
+        display: flex;                            /* Показать бургер */
+    }
+}
+/* Скрытие футера и отображение аккордеона на мобилках */
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+    .accordion {
+        margin-top: 20px;
+    }
+    .accordion-toggle {
+        background-color: #ff4500;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .accordion-content {
+        display: none;
+        margin-top: 10px;
+    }
+    .accordion-content .footer-column {
+        margin-bottom: 15px;
+    }
+    .accordion-content h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #ff4500;
+    }
+    .accordion-content ul {
+        list-style: none;
+        padding: 0;
+    }
+    .accordion-content ul li {
+        margin-bottom: 8px;
+    }
+    .accordion-content ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .accordion-content ul li a:hover {
+        color: #ff4500;
+    }
+}
+/* По умолчанию аккордеон скрыт на ПК */
+.accordion,
+.accordion-toggle,
+.accordion-content {
+    display: none;
+}
+/* На мобильных включаем отображение */
+@media (max-width: 768px) {
+    .accordion {
+        display: block;
+        margin-top: 20px;
+    }
+    .accordion-toggle {
+        display: block;
+        background-color: #ff4500;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .accordion-content {
+        display: none;
+        margin-top: 10px;
+    }
+    .accordion-content.active {
+        display: block;
+    }
+}

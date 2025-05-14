@@ -1,0 +1,311 @@
+/* Базовые стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, .9);       /* Почти черный фон */
+    color: #fff;                         /* Белый текст */
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;                         /* Почти вся ширина */
+    z-index: 1000;                      /* Поверх остального */
+}
+
+/* Логотип */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+.logo:hover {
+    color: #ff4500;                     /* Оранжевый при наведении */
+    transition: color .3s ease;
+}
+
+/* Навигационное меню */
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+nav a:hover {
+    color: #ff4500;
+    transition: color .3s ease;
+}
+
+/* Основной контент */
+main {
+    padding: 100px 20px 50px;           /* Верхний отступ из-за fixed header */
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Заголовок раздела "События" */
+.events h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ff4500;
+    text-align: center;
+}
+
+/* Выпадающий список городов */
+#city-filter {
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+/* Список карточек событий */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/* Карточка события */
+.event-card {
+    background-color: #1a1a1a;
+    border: 2px solid #ff4500;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform .2s, box-shadow .2s;
+    position: relative;
+}
+.event-card:hover {
+    transform: translateY(-5px);         /* Поднятие карточки */
+    box-shadow: 0 0 15px rgba(255, 69, 0, .4);
+}
+/* Изображение события */
+.event-image {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+/* Кнопка "Подробнее" */
+.more-btn {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.more-btn:hover {
+    background-color: #e03e00;
+}
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .8);    /* Затемнение */
+}
+.modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #555;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    color: #fff;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.close:hover {
+    color: #fff;
+}
+
+/* Подвал */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-column {
+    min-width: 200px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+.footer-column ul li a:hover {
+    color: #ff4500;
+}
+/* Бургер-меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.burger div {
+    width: 45px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s;
+}
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 50px;
+        left: -100%;                       /* Скрываем меню */
+        flex-direction: column;
+        background-color: #000;
+        width: 175px;
+        height: 100%;
+        gap: 25px;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+    }
+    nav.active {
+        left: 0;                           /* Показываем при активации */
+    }
+    .burger {
+        display: flex;                     /* Показываем бургер */
+    }
+}
+/* Отключение футера и включение аккордеона на мобильных */
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+    .accordion {
+        margin-top: 20px;
+    }
+    .accordion-toggle {
+        background-color: #ff4500;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .accordion-content {
+        display: none;
+        margin-top: 10px;
+    }
+    .accordion-content .footer-column {
+        margin-bottom: 15px;
+    }
+    .accordion-content h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #ff4500;
+    }
+    .accordion-content ul {
+        list-style: none;
+        padding: 0;
+    }
+    .accordion-content ul li {
+        margin-bottom: 8px;
+    }
+    .accordion-content ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .accordion-content ul li a:hover {
+        color: #ff4500;
+    }
+}
+/* По умолчанию (ПК) — скрыт аккордеон */
+.accordion,
+.accordion-toggle,
+.accordion-content {
+    display: none;
+}
+/* На мобильных — показываем аккордеон */
+@media (max-width: 768px) {
+    .accordion {
+        display: block;
+        margin-top: 20px;
+    }
+    .accordion-toggle {
+        display: block;
+        background-color: #ff4500;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .accordion-content {
+        display: none;
+        margin-top: 10px;
+    }
+    .accordion-content.active {
+        display: block;
+    }
+}
+/* Мобильная адаптация изображений */
+@media (max-width: 768px) {
+    .event-image {
+        width: 100%;                       /* Полная ширина */
+        max-width: 100%;
+        height: auto;
+    }
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+}

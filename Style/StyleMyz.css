@@ -1,0 +1,311 @@
+/* Базовые стили для всей страницы */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, .9);
+    color: #fff;
+}
+
+/* Шапка сайта */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    z-index: 1000;
+}
+
+/* Логотип */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+.logo:hover {
+    color: #ff4500;
+    transition: color .3s ease;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+nav a:hover {
+    color: #ff4500;
+    transition: color .3s ease;
+}
+
+/* Все ссылки — оранжевые */
+a {
+    color: #ff4500;
+}
+
+/* Основной контейнер */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 20px 50px;
+}
+
+/* Основной контент */
+.main-content {
+    flex: 0 0 70%;
+}
+
+/* Боковая панель */
+.sidebar {
+    flex: 0 0 25%;
+    background: rgba(0, 0, 0, .7);
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 3px solid #ff4500;
+    height: auto;
+    max-height: 900px;
+    overflow-y: auto;
+    margin-left: 0;
+}
+
+/* Заголовки */
+h2, h3 {
+    color: #fff;
+}
+
+/* Секции с ресурсами, конкурсами и т.д. */
+.resources,
+.collaboration,
+.contests,
+.platform {
+    background: rgba(0, 0, 0, .5);
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+/* Заголовки секций */
+.resources h3,
+.collaboration h3,
+.contests h3,
+.platform h3 {
+    color: #ff4500;
+}
+
+/* Списки внутри секций */
+.resources ul,
+.collaboration ul,
+.contests ul,
+.platform ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources ul li,
+.collaboration ul li,
+.contests ul li,
+.platform ul li {
+    margin-bottom: 15px;
+}
+
+/* Подвал */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-column {
+    min-width: 200px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+.footer-column ul li a:hover {
+    color: #ff4500;
+}
+
+/* Бургер-меню (мобильная навигация) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.burger div {
+    width: 45px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #000;
+        width: 175px;
+        height: 100%;
+        gap: 25px;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    nav.active {
+        left: 0; /* Открытие меню */
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* Мобильный футер заменяется аккордеоном */
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+
+    .accordion {
+        margin-top: 20px;
+    }
+
+    .accordion-toggle {
+        background-color: #ff4500;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .accordion-content {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .accordion-content .footer-column {
+        margin-bottom: 15px;
+    }
+
+    .accordion-content h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #ff4500;
+    }
+
+    .accordion-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .accordion-content ul li {
+        margin-bottom: 8px;
+    }
+
+    .accordion-content ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .accordion-content ul li a:hover {
+        color: #ff4500;
+    }
+}
+
+/* По умолчанию скрываем аккордеон */
+.accordion,
+.accordion-toggle,
+.accordion-content {
+    display: none;
+}
+
+/* Показываем аккордеон на мобильных */
+@media (max-width: 768px) {
+    .accordion {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .accordion-toggle {
+        display: block;
+        background-color: #ff4500;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .accordion-content {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .accordion-content.active {
+        display: block;
+    }
+}
+
+/* Перестроение main на мобильных: колонка в столбик */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 80px 15px 30px;
+    }
+
+    .sidebar,
+    .main-content {
+        flex: none;
+        width: 90%;
+        margin: 0 0 20px 0;
+    }
+
+    .sidebar {
+        order: 2; /* Положение боковой панели */
+    }
+
+    .main-content {
+        order: 1; /* Положение основного контента */
+    }
+}

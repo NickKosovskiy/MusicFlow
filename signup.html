@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зарегистрироваться - MusicFlow</title>
+
+    <!-- Подключение css -->
+    <link rel="stylesheet" href="Style/StyleSign.css">
+
+    <!-- Подключение js -->
+    <script src="Script/JavaSign.js" defer></script>
+</head>
+<body>
+
+    <!-- Верхняя панель с логотипом и меню -->
+    <header>
+        <a href="./index.html" class="logo">MusicFlow</a>
+
+        <!-- Кнопка бургер-меню для мобильных устройств -->
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Навигационное меню -->
+        <nav id="navMenu">
+            <a href="./news.html">Новости</a>
+            <a href="./novic.html">Начинающим</a>
+            <a href="./events.html">События</a>
+            <a href="./community.html">Сообщество</a>
+            <a href="./myz.html">Музыкантам</a>
+
+            <!-- Выпадающая секция "Информация о MusicFlow" -->
+            <div class="accordion">
+                <button class="accordion-toggle">Информация о MusicFlow ▼</button>
+                <div class="accordion-content">
+                    
+                    <!-- Колонка: Информация -->
+                    <div class="footer-column">
+                        <h3>Узнайте о MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">О MusicFlow</a></li>
+                            <li><a href="./stat.html">Статистика</a></li>
+                            <li><a href="./404.html">Карьера</a></li>
+                            <li><a href="./404.html">Правила и условия</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Соцсети -->
+                    <div class="footer-column">
+                        <h3>Сообщество MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">Telegram</a></li>
+                            <li><a href="./404.html">X (бывший Twitter)</a></li>
+                            <li><a href="./404.html">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Поддержка -->
+                    <div class="footer-column">
+                        <h3>Поддержка</h3>
+                        <ul>
+                            <li><a href="./signup.html">Вход</a></li>
+                            <li><a href="./404.html">Свяжитесь с нами</a></li>
+                            <li><a href="./404.html">Помощь</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Контейнер с формами регистрации и входа -->
+<div class="form-container">
+    <h2 id="form-title">Создать аккаунт</h2>
+
+    <!-- Форма регистрации -->
+    <form id="registration-form" action="submit_registration.html" method="POST" onsubmit="return validateForm()">
+      <label for="username">Имя пользователя</label>
+      <input type="text" id="username" name="username" required placeholder="Введите имя пользователя">
+
+      <label for="email">Электронная почта</label>
+      <input type="email" id="email" name="email" required placeholder="Введите вашу почту">
+
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required placeholder="Введите пароль" onkeyup="checkPasswordStrength()">
+      <div id="password-strength"></div>
+
+      <label for="confirm-password">Подтверждение пароля</label>
+      <input type="password" id="confirm-password" name="confirm-password" required placeholder="Подтвердите пароль" onkeyup="checkPasswordMatch()">
+      <div id="password-error"></div>
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <!-- Форма входа (скрыта по умолчанию) -->
+    <form id="login-form" action="submit_login.html" method="POST" style="display: none;">
+      <label for="login-email">Электронная почта</label>
+      <input type="email" id="login-email" name="email" required placeholder="Введите вашу почту">
+
+      <label for="login-password">Пароль</label>
+      <input type="password" id="login-password" name="password" required placeholder="Введите пароль">
+
+      <button type="submit">Войти</button>
+    </form>
+
+    <!-- Ссылка на переключение между регистрацией и входом -->
+    <p id="toggle-link" style="cursor: pointer; color: #ff4500;">Уже есть аккаунт? Войти</p>
+  </div>
+
+  <!-- Футер -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Узнайте о MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">О MusicFlow</a></li>
+                    <li><a href="./stat.html">Статистика</a></li>
+                    <li><a href="./404.html">Карьера</a></li>
+                    <li><a href="./404.html">Правила и условия</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Сообщество MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">Telegram</a></li>
+                    <li><a href="./404.html">X (бывший Twitter)</a></li>
+                    <li><a href="./404.html">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul>
+                    <li><a href="./signup.html">Вход</a></li>
+                    <li><a href="./404.html">Свяжитесь с нами</a></li>
+                    <li><a href="./404.html">Помощь</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

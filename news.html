@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFlow - Новости</title>
+
+    <!-- Подключение css -->
+    <link rel="stylesheet" href="Style/StyleNews.css">
+
+    <!-- Подключение js -->
+    <script src="Script/JavaNews.js" defer></script>
+
+    <!-- Политика безопасности контента для защиты от XSS -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+</head>
+<body>
+
+    <!-- Верхняя панель с логотипом и меню -->
+    <header>
+        <a href="./index.html" class="logo">MusicFlow</a>
+
+        <!-- Кнопка бургер-меню для мобильных устройств -->
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Навигационное меню -->
+        <nav id="navMenu">
+            <a href="./news.html">Новости</a>
+            <a href="./novic.html">Начинающим</a>
+            <a href="./events.html">События</a>
+            <a href="./community.html">Сообщество</a>
+            <a href="./myz.html">Музыкантам</a>
+
+            <!-- Выпадающая секция "Информация о MusicFlow" -->
+            <div class="accordion">
+                <button class="accordion-toggle">Информация о MusicFlow ▼</button>
+                <div class="accordion-content">
+                    
+                    <!-- Колонка: Информация -->
+                    <div class="footer-column">
+                        <h3>Узнайте о MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">О MusicFlow</a></li>
+                            <li><a href="./stat.html">Статистика</a></li>
+                            <li><a href="./404.html">Карьера</a></li>
+                            <li><a href="./404.html">Правила и условия</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Соцсети -->
+                    <div class="footer-column">
+                        <h3>Сообщество MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">Telegram</a></li>
+                            <li><a href="./404.html">X (бывший Twitter)</a></li>
+                            <li><a href="./404.html">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Поддержка -->
+                    <div class="footer-column">
+                        <h3>Поддержка</h3>
+                        <ul>
+                            <li><a href="./signup.html">Вход</a></li>
+                            <li><a href="./404.html">Свяжитесь с нами</a></li>
+                            <li><a href="./404.html">Помощь</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main>
+        <!-- Секция: основные музыкальные новости -->
+        <section class="news-main">
+            <h2><span>Свежие новости музыки</span></h2>
+
+            <!-- Новость 1 -->
+            <div class="news-item">
+                <a href="images/KISS.webp" target="_blank">
+                    <img src="images/KISS.webp" alt="Гитарист KISS">
+                </a>
+                <h3>Экс-гитарист KISS Брюс Кулик планирует написать автобиографию</h3>
+                <div class="news-text hidden-on-mobile">
+                    <p>Бывший гитарист американской рок-группы KISS Брюс Кулик заявил, что в следующем году он планирует начать работу над автобиографией. По словам музыканта, в книге он подробно расскажет о своей жизни и работе с KISS.</p>
+                    <h6>31 декабря 2024г</h6>
+                </div>
+                <button class="toggle-btn">Подробнее</button>
+            </div>
+
+            <!-- Новость 2 -->
+            <div class="news-item">
+                <a href="images/Brothers.webp" target="_blank">
+                    <img src="images/Brothers.webp" alt="Doobie Brothers">
+                </a>
+                <h3>The Doobie Brothers выпустят новый альбом Walk This Road в 2025 году</h3>
+                <div class="news-text hidden-on-mobile">
+                    <p>Американская рок-группа The Doobie Brothers подтвердила, что выпустит новый студийник под названием Walk This Road в следующем году. В создании лонгплея также принял участие Майкл Макдональд, который в последний раз работал над оригинальными песнями бэнда в 1980 году.</p>
+                    <h6>30 декабря 2024г</h6>
+                </div>
+                <button class="toggle-btn">Подробнее</button>
+            </div>
+
+            <!-- Новость 3 -->
+            <div class="news-item">
+                <a href="images/Tchaikovsky.webp" target="_blank">
+                    <img src="images/Tchaikovsky.webp" alt="Чайковский">
+                </a>
+                <h3>Гениальный Чайковский: 10 историй из жизни композитора</h3>
+                <div class="news-text hidden-on-mobile">
+                    <p>7 мая — РИА Новости, Жанна Старицына. В этом году исполняется 185 лет со дня рождения Петра Ильича Чайковского. Великий русский композитор много путешествовал, часто писал письма близким, в которых был очень откровенен. Чиать больше с официального сайта:</p>
+                    <a href="https://ria.ru/20250507/chaykovskiy-2015039535.html">РИА-Новости</a>
+                    <h6>7 мая 2025г</h6>
+                </div>
+                <button class="toggle-btn">Подробнее</button>
+            </div>
+        </section>
+
+        <!-- Боковая панель с дополнительными новостями -->
+        <aside class="news-sidebar">
+            <h2><span>Другие новости</span></h2>
+
+            <!-- Новость 4 -->
+            <div class="news-item">
+                <h3>Леди Гага хочет написать бродвейский мюзикл</h3>
+                <div class="news-text hidden-on-mobile">
+                    <p>Леди Гага уже давно перестала ассоциироваться только как певица. Звезда успешно снимается в кино и сериалах, а теперь хочет попробовать написать бродвейский мюзикл.</p>
+                </div>
+                <button class="toggle-btn">Подробнее</button>
+            </div>
+
+            <!-- Новость 5 -->
+            <div class="news-item">
+                <h3>Adidas распродала все пары кроссовок Yeezy из коллаборации с Канье Уэстом</h3>
+                <div class="news-text hidden-on-mobile">
+                    <p>Adidas объявила, что полностью распродала все пары кроссовок Yeezy, выпущенные в сотрудничестве с Канье Уэстом. В 2013 году рэпер заключил с брендом прибыльное соглашение, стоимость которого превышала миллиард долларов, но в октябре 2022 года Adidas разорвала партнерство после антисемитских высказываний Уэста.</p>
+                </div>
+                <button class="toggle-btn">Подробнее</button>
+            </div>
+
+            <!-- Новость 6 -->
+            <div class="news-item">
+                <h3>Джим Рут из Slipknot рассказал о процессе написания музыки</h3>
+                <div class="news-text hidden-on-mobile">
+                    <p>«Многие люди говорят, что песни пишутся сами собой, и когда это действительно так происходит, то, как правило, получаются хорошие песни», — рассказал Джим Рут в интервью для Andertons Music Co. Гитарист также признался, что бывают треки, которые лежат в виде демо-записей годами до того момента, как в них «откроется» что-то необычное в процессе работы.</p>
+                </div>
+                <button class="toggle-btn">Подробнее</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Узнайте о MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">О MusicFlow</a></li>
+                    <li><a href="./stat.html">Статистика</a></li>
+                    <li><a href="./404.html">Карьера</a></li>
+                    <li><a href="./404.html">Правила и условия</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Сообщество MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">Telegram</a></li>
+                    <li><a href="./404.html">X (бывший Twitter)</a></li>
+                    <li><a href="./404.html">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul>
+                    <li><a href="./signup.html">Вход</a></li>
+                    <li><a href="./404.html">Свяжитесь с нами</a></li>
+                    <li><a href="./404.html">Помощь</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

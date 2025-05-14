@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFlow — Сообщества</title>
+
+    <!-- Подключение css -->
+    <link rel="stylesheet" href="Style/StyleCommunity.css">
+
+    <!-- Подключение js -->
+    <script src="Script/JavaCommunity.js" defer></script>
+
+    <!-- Политика безопасности контента для защиты от XSS -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+</head>
+<body>
+
+    <!-- Верхняя панель с логотипом и меню -->
+    <header>
+        <a href="./index.html" class="logo">MusicFlow</a>
+
+        <!-- Кнопка бургер-меню для мобильных устройств -->
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Навигационное меню -->
+        <nav id="navMenu">
+            <a href="./news.html">Новости</a>
+            <a href="./novic.html">Начинающим</a>
+            <a href="./events.html">События</a>
+            <a href="./community.html">Сообщество</a>
+            <a href="./myz.html">Музыкантам</a>
+
+            <!-- Выпадающая секция "Информация о MusicFlow" -->
+            <div class="accordion">
+                <button class="accordion-toggle">Информация о MusicFlow ▼</button>
+                <div class="accordion-content">
+                    
+                    <!-- Колонка: Информация -->
+                    <div class="footer-column">
+                        <h3>Узнайте о MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">О MusicFlow</a></li>
+                            <li><a href="./stat.html">Статистика</a></li>
+                            <li><a href="./404.html">Карьера</a></li>
+                            <li><a href="./404.html">Правила и условия</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Соцсети -->
+                    <div class="footer-column">
+                        <h3>Сообщество MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">Telegram</a></li>
+                            <li><a href="./404.html">X (бывший Twitter)</a></li>
+                            <li><a href="./404.html">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Поддержка -->
+                    <div class="footer-column">
+                        <h3>Поддержка</h3>
+                        <ul>
+                            <li><a href="./signup.html">Вход</a></li>
+                            <li><a href="./404.html">Свяжитесь с нами</a></li>
+                            <li><a href="./404.html">Помощь</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Секция сообществ -->
+    <section class="community-section">
+        <h2>Выберите сообщество:</h2>
+
+        <!-- Карточка сообщества -->
+        <div class="community-card">
+            <img src="images/Rock.jpg" alt="Рок">
+            <div class="info">
+                <h3>Любители рока</h3>
+                <div class="details">
+                    <span>1520 участников</span> • <span>12.05.2018</span>
+                </div>
+                <p>Обсуждение рок-музыки и концертов</p>
+                <a href="404.html">Перейти</a>
+            </div>
+        </div>
+
+        <div class="community-card">
+            <img src="images/Pop.webp" alt="Поп">
+            <div class="info">
+                <h3>Любители поп-музыки</h3>
+                <div class="details">
+                    <span>2430 участников</span> • <span>08.09.2019</span>
+                </div>
+                <p>Новости и тренды в поп-музыке</p>
+                <a href="404.html">Перейти</a>
+            </div>
+        </div>
+
+        <div class="community-card">
+            <img src="images/Jaz.jpg" alt="Джаз">
+            <div class="info">
+                <h3>Фанаты джаза</h3>
+                <div class="details">
+                    <span>980 участников</span> • <span>21.03.2017</span>
+                </div>
+                <p>Джазовые исполнители и их творчество</p>
+                <a href="404.html">Перейти</a>
+            </div>
+        </div>
+
+        <div class="community-card">
+            <img src="images/EDM.jpg" alt="EDM">
+            <div class="info">
+                <h3>Электронная музыка</h3>
+                <div class="details">
+                    <span>1875 участников</span> • <span>15.04.2020</span>
+                </div>
+                <p>Обсуждение EDM и фестивалей</p>
+                <a href="404.html">Перейти</a>
+            </div>
+        </div>
+
+        <div class="community-card">
+            <img src="images/Meloman.jpg" alt="Меломаны">
+            <div class="info">
+                <h3>Меломаны</h3>
+                <div class="details">
+                    <span>2355 участников</span> • <span>08.07.2019</span>
+                </div>
+                <p>Любители разной музыки</p>
+                <a href="404.html">Перейти</a>
+            </div>
+        </div>
+
+        <!-- Кнопка создания сообщества -->
+        <div class="button-container">
+            <a href="404.html" class="btn">Создать сообщество</a>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Узнайте о MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">О MusicFlow</a></li>
+                    <li><a href="./stat.html">Статистика</a></li>
+                    <li><a href="./404.html">Карьера</a></li>
+                    <li><a href="./404.html">Правила и условия</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Сообщество MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">Telegram</a></li>
+                    <li><a href="./404.html">X (бывший Twitter)</a></li>
+                    <li><a href="./404.html">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul>
+                    <li><a href="./signup.html">Вход</a></li>
+                    <li><a href="./404.html">Свяжитесь с нами</a></li>
+                    <li><a href="./404.html">Помощь</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

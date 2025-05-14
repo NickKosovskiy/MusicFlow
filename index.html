@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFlow - Главная</title>
+
+    <!-- Подключение основного CSS -->
+    <link rel="stylesheet" href="Style/StyleMain.css">
+
+    <!-- Подключение JavaScript с отложенной загрузкой -->
+    <script src="Script/JavaMain.js" defer></script>
+
+    <!-- Политика безопасности контента для защиты от XSS -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+</head>
+<body>
+
+    <!-- Верхняя панель с логотипом и меню -->
+    <header>
+        <a href="./index.html" class="logo">MusicFlow</a>
+
+        <!-- Кнопка бургер-меню для мобильных устройств -->
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Навигационное меню -->
+        <nav id="navMenu">
+            <a href="./news.html">Новости</a>
+            <a href="./novic.html">Начинающим</a>
+            <a href="./events.html">События</a>
+            <a href="./community.html">Сообщество</a>
+            <a href="./myz.html">Музыкантам</a>
+
+            <!-- Выпадающая секция "Информация о MusicFlow" -->
+            <div class="accordion">
+                <button class="accordion-toggle">Информация о MusicFlow ▼</button>
+                <div class="accordion-content">
+                    
+                    <!-- Колонка: Информация -->
+                    <div class="footer-column">
+                        <h3>Узнайте о MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">О MusicFlow</a></li>
+                            <li><a href="./stat.html">Статистика</a></li>
+                            <li><a href="./404.html">Карьера</a></li>
+                            <li><a href="./404.html">Правила и условия</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Соцсети -->
+                    <div class="footer-column">
+                        <h3>Сообщество MusicFlow</h3>
+                        <ul>
+                            <li><a href="./404.html">Telegram</a></li>
+                            <li><a href="./404.html">X (бывший Twitter)</a></li>
+                            <li><a href="./404.html">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка: Поддержка -->
+                    <div class="footer-column">
+                        <h3>Поддержка</h3>
+                        <ul>
+                            <li><a href="./signup.html">Вход</a></li>
+                            <li><a href="./404.html">Свяжитесь с нами</a></li>
+                            <li><a href="./404.html">Помощь</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Главный приветственный блок -->
+    <section class="hero">
+        <h1>Приветствую вас в <span>MusicFlow</span></h1>
+        <p>Учитесь создавать произведения или будьте тем, кто будет курировать новичков в своём начинании.</p>
+        <a href="signup.html" class="btn">Зарегистрироваться</a>
+    </section>
+    <!-- Информационный блок о платформе -->
+    <section class="info">
+        <h2>О MusicFlow</h2>
+        <p>MusicFlow — это платформа для начинающих музыкантов и не только, где каждый может научиться чему-то новому.</p>
+        <p>Также узнавайте свежие новости музыки и шоу-бизнеса.</p>
+
+        <!-- Кнопка, меняющая текст ниже (обрабатывается в JS) -->
+        <button class="btn" id="changeTextBtn">⠀⠀⠀⠀</button>
+        <p id="changeableText">Нажмите кнопку выше, чтобы узнать больше о сайте.</p>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Узнайте о MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">О MusicFlow</a></li>
+                    <li><a href="./stat.html">Статистика</a></li>
+                    <li><a href="./404.html">Карьера</a></li>
+                    <li><a href="./404.html">Правила и условия</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Сообщество MusicFlow</h3>
+                <ul>
+                    <li><a href="./404.html">Telegram</a></li>
+                    <li><a href="./404.html">X (бывший Twitter)</a></li>
+                    <li><a href="./404.html">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul>
+                    <li><a href="./signup.html">Вход</a></li>
+                    <li><a href="./404.html">Свяжитесь с нами</a></li>
+                    <li><a href="./404.html">Помощь</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
